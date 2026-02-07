@@ -1,12 +1,12 @@
 [build]
-command = "cd client && npm install && npm run build"
-publish = "client/dist"
-base = "."
+  base = "client"
+  command = "npm install && npx vite build"
+  publish = "dist"
 
 [build.environment]
-NODE_VERSION = "20"
+  NODE_VERSION = "20"
 
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
