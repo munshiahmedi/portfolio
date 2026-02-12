@@ -2090,6 +2090,41 @@ a:focus-visible {
   font-size: 0.9rem;
 }
 
+/* Project Actions */
+.project-actions {
+  padding: 0 1.5rem;
+  margin: 2.5rem 0 2rem 0;
+}
+
+.project-tech-stack {
+  margin-top: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent-main);
+  border-radius: 4px;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.project-link:hover {
+  background: rgba(56, 189, 248, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+}
+
+.project-link i {
+  font-size: 1.1em;
+}
+
 /* Project Content */
 .project-showcase > *:not(.project-proof) {
   padding: 0 1.5rem;

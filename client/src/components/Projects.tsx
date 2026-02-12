@@ -22,6 +22,16 @@ const Projects: React.FC = () => {
             <p className="project-description">
               A responsive portfolio website built with React and TypeScript to showcase my work and skills.
             </p>
+            <div className="project-actions">
+              <a 
+                href="https://github.com/munshiahmedi/portfolio" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <i className="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
             <div className="project-tech-stack">
               <h4>Tech Stack</h4>
               <div className="tech-tags">
@@ -46,6 +56,16 @@ const Projects: React.FC = () => {
             <p className="project-description">
               A complete hotel booking platform with user authentication, booking management, and admin dashboard.
             </p>
+            <div className="project-actions">
+              <a 
+                href="https://github.com/munshiahmedi/hotel-booking" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <i className="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
             <div className="project-tech-stack">
               <h4>Tech Stack</h4>
               <div className="tech-tags">
