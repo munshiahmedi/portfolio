@@ -14,12 +14,52 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{success: boolean; message: string} | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/ahmedimunshi@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: 'New Contact Form Submission',
+          _template: 'table',
+          _captcha: 'false',
+          _next: window.location.origin + '/thank-you' // Optional: Redirect after submission
+        })
+      });
+
+      const result = await response.json();
+      
+      if (response.ok) {
+        setSubmitStatus({
+          success: true,
+          message: 'Message sent successfully! I\'ll get back to you soon.'
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus({
+        success: false,
+        message: 'Failed to send message. Please try again later or email me directly at ahmedimunshi@gmail.com'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -27,7 +67,6 @@ const Contact: React.FC = () => {
       <div className="contact-container">
         {/* Section Header */}
         <div className="section-header">
-          <div className="accent-line"></div>
           <h2>Get In Touch</h2>
          
         </div>
@@ -91,7 +130,17 @@ const Contact: React.FC = () => {
           {/* Right Column - Contact Form */}
           <div className="contact-form-container">
             <h3>Contact Form</h3>
-            <form onSubmit={handleSubmit} className="contact-form">
+            {submitStatus && (
+              <div className={`form-message ${submitStatus.success ? 'success' : 'error'}`}>
+                {submitStatus.message}
+              </div>
+            )}
+            <form 
+              onSubmit={handleSubmit} 
+              className="contact-form"
+              method="POST"
+              action="https://formsubmit.co/ahmedimunshi@gmail.com"
+            >
               <div className="form-group">
                 <label htmlFor="name">Name</label>
                 <input
@@ -131,8 +180,12 @@ const Contact: React.FC = () => {
                 />
               </div>
 
-              <button type="submit" className="btn-primary">
-                Send Message
+              <button 
+                type="submit" 
+                className="btn btn-primary"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

@@ -1,13 +1,14 @@
 import React from 'react';
 import { 
   FaReact, FaNodeJs, FaDatabase, FaTools, 
-  FaHtml5, FaCss3Alt, FaJs, FaGithub, FaMobile 
+  FaHtml5, FaCss3Alt, FaJs, FaGithub 
 } from 'react-icons/fa';
 import { 
   SiTypescript, SiNextdotjs, SiExpress, 
-  SiMysql, SiPostman 
+  SiMysql, SiPostman, SiFigma
 } from 'react-icons/si';
-import { VscVm } from 'react-icons/vsc';
+import { VscVm, VscLayout } from 'react-icons/vsc';
+import { FiLayers, FiSmartphone } from 'react-icons/fi';
 
 const Skills: React.FC = () => {
 
@@ -23,6 +24,18 @@ const Skills: React.FC = () => {
         { name: 'HTML', level: 95 },
         { name: 'CSS', level: 90 },
         { name: 'JavaScript', level: 90 },
+        { name: 'React.js', level: 85 },
+        { name: 'React Native Basics', level: 70 },
+      ],
+    },
+    {
+      title: 'UI/UX Design',
+      icon: <VscLayout className="category-icon" />,
+      skills: [
+        { name: 'Figma', level: 85 },
+        { name: 'Wireframes', level: 80 },
+        { name: 'Prototype', level: 75 },
+        { name: 'Responsive Design', level: 85 },
       ],
     },
     {
@@ -35,12 +48,12 @@ const Skills: React.FC = () => {
       ],
     },
     {
-      title: 'Mobile Development',
-      icon: <FaMobile className="category-icon" />,
+      title: 'Tools',
+      icon: <FaTools className="category-icon" />,
       skills: [
-        { name: 'React Native', level: 85 },
-        { name: 'Android', level: 75 },
-        { name: 'iOS', level: 70 }
+        { name: 'Git & GitHub', level: 80 },
+        { name: 'Postman', level: 85 },
+        { name: 'Windsurf', level: 90 },
       ],
     },
     {
@@ -48,15 +61,6 @@ const Skills: React.FC = () => {
       icon: <FaDatabase className="category-icon" />,
       skills: [
         { name: 'MySQL', level: 75 },
-      ],
-    },
-    {
-      title: 'Tools',
-      icon: <FaTools className="category-icon" />,
-      skills: [
-        { name: 'Git & GitHub', level: 80 },
-        { name: 'Postman', level: 85 },
-        { name: 'VS Code', level: 90 },
       ],
     },
   ];

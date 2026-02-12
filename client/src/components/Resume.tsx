@@ -32,20 +32,19 @@ const Resume: React.FC = () => {
 
             <div className="resume-actions">
               <a
-                href="https://drive.google.com/file/d/1Tqzkh3uZJJAk1jZVfffmQBUyVpCw3VzV/view?usp=drivesdk"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/resume.pdf"
+                download="Ahmedi_Resume.pdf"
                 className="btn-primary"
               >
                 Download Resume (PDF)
               </a>
               <a
-                href="https://drive.google.com/file/d/1Tqzkh3uZJJAk1jZVfffmQBUyVpCw3VzV/view?usp=drivesdk"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
               >
-                View Resume Online
+                View Resume
               </a>
             </div>
           </div>
