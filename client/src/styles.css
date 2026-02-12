@@ -2209,6 +2209,24 @@ a:focus-visible {
   margin-bottom: 0.5rem;
 }
 
+.coming-soon {
+  color: var(--accent-main);
+  font-size: 0.9rem;
+  margin: 0 1.5rem 1rem;
+  font-style: italic;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coming-soon::before {
+  content: '•';
+  color: var(--accent-main);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 .project-description p {
   font-size: 1.15rem;
   color: var(--muted);

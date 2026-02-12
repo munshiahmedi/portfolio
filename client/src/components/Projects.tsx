@@ -22,6 +22,7 @@ const Projects: React.FC = () => {
             <p className="project-description">
               A responsive portfolio website built with React and TypeScript to showcase my work and skills.
             </p>
+            <p className="coming-soon">Live demo coming soon</p>
             <div className="project-actions">
               <a 
                 href="https://github.com/munshiahmedi/portfolio" 
@@ -29,7 +30,7 @@ const Projects: React.FC = () => {
                 rel="noopener noreferrer"
                 className="project-link"
               >
-                <i className="fab fa-github"></i> View on GitHub
+                <i className="fab fa-github"></i> View Code
               </a>
             </div>
             <div className="project-tech-stack">
@@ -56,6 +57,7 @@ const Projects: React.FC = () => {
             <p className="project-description">
               A complete hotel booking platform with user authentication, booking management, and admin dashboard.
             </p>
+            <p className="coming-soon">Live demo coming soon</p>
             <div className="project-actions">
               <a 
                 href="https://github.com/munshiahmedi/hotel-booking" 
@@ -63,7 +65,7 @@ const Projects: React.FC = () => {
                 rel="noopener noreferrer"
                 className="project-link"
               >
-                <i className="fab fa-github"></i> View on GitHub
+                <i className="fab fa-github"></i> View Code
               </a>
             </div>
             <div className="project-tech-stack">
