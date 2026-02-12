@@ -2256,30 +2256,49 @@ a:focus-visible {
 
 /* Mobile */
 @media (max-width: 480px) {
+  .projects-container {
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1rem 0;
+    margin: 0;
+    width: 100%;
   }
   
   .project-showcase {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0 0 1.5rem 0;
+    border-radius: 0;
   }
   
   .project-proof {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-radius: 0;
     aspect-ratio: 16/9;
   }
   
   .project-title {
     font-size: 1.2rem;
     margin: 1.25rem 1rem 0.75rem;
+    padding: 0 1rem;
   }
   
   .project-description {
     font-size: 1rem;
     margin: 0 1rem 0.75rem;
+    padding: 0 1rem;
   }
   
   .project-actions {
