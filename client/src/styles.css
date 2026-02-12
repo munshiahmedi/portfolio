@@ -416,9 +416,9 @@ section + section {
 }
 
 .hero__title {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   color: var(--text-heading);
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
@@ -442,9 +442,9 @@ section + section {
 }
 
 .hero__subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-body);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   font-weight: 400;
   opacity: 0.9;
   animation: fadeInUp 0.8s ease-out 0.3s both;
@@ -762,14 +762,14 @@ section + section {
 }
 
 .hero__title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .hero__description {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  line-height: 1.6;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  line-height: 1.5;
   color: var(--text-body);
   max-width: 600px;
   margin: 1.5rem 0 2rem;
