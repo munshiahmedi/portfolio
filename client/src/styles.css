@@ -2104,25 +2104,39 @@ a:focus-visible {
 .project-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   color: var(--accent-main);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   border: 1px solid var(--accent-main);
-  border-radius: 4px;
-  background: rgba(56, 189, 248, 0.1);
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-link:hover {
-  background: rgba(56, 189, 248, 0.2);
+  background: rgba(56, 189, 248, 0.1);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+  color: var(--accent-hover);
+  border-color: var(--accent-hover);
 }
 
 .project-link i {
   font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover i {
+  transform: translateX(2px);
 }
 
 /* Project Content */
