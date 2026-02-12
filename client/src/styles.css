@@ -2257,8 +2257,7 @@ a:focus-visible {
 /* Mobile */
 @media (max-width: 480px) {
   .projects-section {
-    padding: 0;
-    margin-top: 0;
+    padding: 3rem 0;
   }
   
   .projects-container {
@@ -2278,7 +2277,7 @@ a:focus-visible {
   .project-showcase {
     width: 100%;
     max-width: 100%;
-    margin: 0;
+    margin: 0 0 2rem 0;
     padding: 0;
     border-radius: 0;
     border: none;
@@ -2294,7 +2293,6 @@ a:focus-visible {
     position: relative;
     left: 0;
     right: 0;
-    top: 0;
   }
   
   .project-proof img {
