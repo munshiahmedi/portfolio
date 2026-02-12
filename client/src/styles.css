@@ -2032,9 +2032,12 @@ a:focus-visible {
 /* Projects Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
   padding: 1.5rem 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 /* Project Card */
@@ -2044,10 +2047,14 @@ a:focus-visible {
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
-  min-height: 520px;
+  min-height: 0;
+  height: 100%;
   padding-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 .project-showcase:hover {
@@ -2069,6 +2076,9 @@ a:focus-visible {
   position: relative;
   border-radius: 8px 8px 0 0;
   border: 1px solid var(--border-color);
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 .project-proof img {
@@ -2203,11 +2213,82 @@ a:focus-visible {
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
   .projects-container {
-    max-width: 1200px;
+    max-width: 100%;
+    padding: 0 1.5rem;
   }
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .project-showcase {
+    min-height: auto;
+  }
+  
+  .project-title {
+    font-size: 1.1rem;
+    margin: 1rem 1rem 0.75rem;
+  }
+  
+  .project-description {
+    font-size: 0.95rem;
+    margin: 0 1rem 0.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .project-showcase {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .project-proof {
+    aspect-ratio: 16/9;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+    margin: 1.25rem 1rem 0.75rem;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    margin: 0 1rem 0.75rem;
+  }
+  
+  .project-actions {
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .project-link {
+    max-width: 100%;
+    padding: 0.6rem 1rem;
+  }
+  
+  .tech-tags {
+    gap: 0.4rem;
+  }
+  
+  .tech-tags span {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
   }
 }
 
