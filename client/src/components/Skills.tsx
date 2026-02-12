@@ -25,7 +25,7 @@ const Skills: React.FC = () => {
         { name: 'CSS', level: 90 },
         { name: 'JavaScript', level: 90 },
         { name: 'React.js', level: 85 },
-        { name: 'React Native Basics', level: 70 },
+        { name: 'React Native', level: 70 },
       ],
     },
     {
@@ -53,7 +53,6 @@ const Skills: React.FC = () => {
       skills: [
         { name: 'Git & GitHub', level: 80 },
         { name: 'Postman', level: 85 },
-        { name: 'Windsurf', level: 90 },
       ],
     },
     {
