@@ -384,8 +384,46 @@ section + section {
   max-width: 1400px;
   margin: 0;
   padding: 2rem 0;
-  position: relative;
   gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.hero__text {
+  flex: 1;
+  min-width: 0; /* Prevents flex items from overflowing */
+}
+
+.hero__title .title-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1200px) {
+  .hero__main {
+    gap: 2rem;
+  }
+  
+  .hero__title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__main {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+  
+  .hero__title .title-line {
+    white-space: normal;
+    display: block;
+  }
+  
+  .hero__actions {
+    justify-content: center;
+  }
 }
 
 .hero__text {
@@ -608,11 +646,33 @@ section + section {
 }
 
 .hero__title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
   color: var(--text-heading);
   animation: fadeInUp 0.8s ease-out 0.2s both;
+  line-height: 1.2;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .title-line {
+    display: block;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}
+
+.typing-text {
+  display: inline-block;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 .animated-word {
