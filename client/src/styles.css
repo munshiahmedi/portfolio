@@ -2256,16 +2256,20 @@ a:focus-visible {
 
 /* Mobile */
 @media (max-width: 480px) {
+  .projects-section {
+    padding: 3rem 0;
+  }
+  
   .projects-container {
-    padding: 0 1rem;
+    padding: 0;
     width: 100%;
-    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1rem 0;
+    display: block;
+    padding: 0;
     margin: 0;
     width: 100%;
   }
@@ -2273,20 +2277,29 @@ a:focus-visible {
   .project-showcase {
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    padding: 0 0 1.5rem 0;
+    margin: 0 0 2rem 0;
+    padding: 0;
     border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
   }
   
   .project-proof {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     border-radius: 0;
     aspect-ratio: 16/9;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+  
+  .project-proof img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   
   .project-title {
@@ -2302,8 +2315,8 @@ a:focus-visible {
   }
   
   .project-actions {
-    padding: 0 1rem;
-    margin: 0.5rem 0;
+    padding: 0 1.5rem;
+    margin: 1rem 0;
   }
   
   .project-link {
