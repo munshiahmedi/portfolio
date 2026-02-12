@@ -2075,12 +2075,13 @@ a:focus-visible {
   overflow: hidden;
   background: var(--bg-main);
   position: relative;
-  border-radius: 8px 8px 0 0;
+  border-radius: 0;
   border: none;
   margin: 0;
   padding: 0;
   display: block;
-  line-height: 0; /* Removes any extra space below the image */
+  line-height: 0;
+  box-sizing: border-box;
 }
 
 .project-proof img {
@@ -2098,6 +2099,8 @@ a:focus-visible {
   top: 0;
   right: 0;
   bottom: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .project-showcase:hover .project-proof img {
@@ -2286,14 +2289,17 @@ a:focus-visible {
   }
   
   .project-proof {
-    width: 100%;
+    width: 100vw;
     margin: 0;
     padding: 0;
     border-radius: 0;
     aspect-ratio: 16/9;
     position: relative;
-    left: 0;
-    right: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: none;
   }
   
   .project-proof img {
