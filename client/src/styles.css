@@ -257,9 +257,9 @@ section + section {
 
 #home .hero__photo {
   position: absolute;
-  right: 0;
+  right: 5%;
   top: 50%;
-  transform: translateY(-50%) translateX(50%);
+  transform: translateY(-50%);
   z-index: 1;
   width: 400px;
   height: 400px;
@@ -273,6 +273,8 @@ section + section {
   align-items: center;
   justify-content: center;
   margin: 0;
+  margin-left: auto;
+  margin-right: 5%;
   overflow: hidden;
   box-sizing: border-box;
   padding: 10px;
