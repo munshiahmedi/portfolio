@@ -15,7 +15,7 @@ const About: React.FC = () => {
           <div className="about-photo-container">
             <div className="hero__photo">
               <img 
-                src="/Ahmedii.jpeg" 
+                src="/Ahmedii.webp" 
                 alt="Profile" 
                 className="hero__profile-img"
               />

@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
           <div className="project-showcase">
             <div className="project-proof">
               <img 
-                src="/portfolio.png" 
+                src="/portfolio.webp" 
                 alt="Portfolio Website"
                 className="project-image"
               />
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
           <div className="project-showcase">
             <div className="project-proof">
               <img 
-                src="/hotel-booking.png" 
+                src="/hotel-booking.webp" 
                 alt="Hotel Booking System"
                 className="project-image"
               />
@@ -93,7 +93,7 @@ const Projects: React.FC = () => {
               border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
               <img 
-                src="/react-native-thumbnail.png" 
+                src="/react-native-thumbnail.webp" 
                 alt="Social Media App Mockup"
                 style={{
                   width: '100%',
