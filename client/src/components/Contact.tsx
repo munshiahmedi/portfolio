@@ -18,26 +18,22 @@ const Contact: React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<{success: boolean; message: string} | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    console.log('Form submission started');
     e.preventDefault();
-    console.log('Default prevented');
     
     try {
-      console.log('Setting isSubmitting to true');
       setIsSubmitting(true);
       setSubmitStatus(null);
 
-      console.log('Form data:', formData);
+      // Create form data object
       const formDataObj = new FormData();
-      formDataObj.append('name', formData.name);
-      formDataObj.append('email', formData.email);
-      formDataObj.append('message', formData.message);
+      formDataObj.append('name', formData.name.trim());
+      formDataObj.append('email', formData.email.trim());
+      formDataObj.append('message', formData.message.trim());
       formDataObj.append('_subject', 'New Contact Form Submission');
       formDataObj.append('_template', 'table');
       formDataObj.append('_captcha', 'false');
-      formDataObj.append('_next', window.location.origin + '/thank-you');
+      formDataObj.append('_next', `${window.location.origin}/thank-you`);
 
-      console.log('Sending request to FormSubmit');
       const response = await fetch('https://formsubmit.co/ajax/ahmedimunshi@gmail.com', {
         method: 'POST',
         body: formDataObj,
@@ -46,19 +42,15 @@ const Contact: React.FC = () => {
         }
       });
 
-      console.log('Response status:', response.status);
       const result = await response.json();
-      console.log('Response data:', result);
       
       if (response.ok) {
-        console.log('Form submission successful');
         setSubmitStatus({
           success: true,
           message: 'Message sent successfully! I\'ll get back to you soon.'
         });
         setFormData({ name: '', email: '', message: '' });
       } else {
-        console.error('Form submission failed:', result);
         throw new Error(result.message || 'Failed to send message');
       }
     } catch (error) {
