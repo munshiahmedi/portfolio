@@ -18,37 +18,47 @@ const Contact: React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<{success: boolean; message: string} | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log('Form submission started');
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
+    console.log('Default prevented');
+    
     try {
+      console.log('Setting isSubmitting to true');
+      setIsSubmitting(true);
+      setSubmitStatus(null);
+
+      console.log('Form data:', formData);
+      const formDataObj = new FormData();
+      formDataObj.append('name', formData.name);
+      formDataObj.append('email', formData.email);
+      formDataObj.append('message', formData.message);
+      formDataObj.append('_subject', 'New Contact Form Submission');
+      formDataObj.append('_template', 'table');
+      formDataObj.append('_captcha', 'false');
+      formDataObj.append('_next', window.location.origin + '/thank-you');
+
+      console.log('Sending request to FormSubmit');
       const response = await fetch('https://formsubmit.co/ajax/ahmedimunshi@gmail.com', {
         method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
+        body: formDataObj,
+        headers: {
           'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          _subject: 'New Contact Form Submission',
-          _template: 'table',
-          _captcha: 'false',
-          _next: window.location.origin + '/thank-you' // Optional: Redirect after submission
-        })
+        }
       });
 
+      console.log('Response status:', response.status);
       const result = await response.json();
+      console.log('Response data:', result);
       
       if (response.ok) {
+        console.log('Form submission successful');
         setSubmitStatus({
           success: true,
           message: 'Message sent successfully! I\'ll get back to you soon.'
         });
         setFormData({ name: '', email: '', message: '' });
       } else {
+        console.error('Form submission failed:', result);
         throw new Error(result.message || 'Failed to send message');
       }
     } catch (error) {
@@ -138,8 +148,6 @@ const Contact: React.FC = () => {
             <form 
               onSubmit={handleSubmit} 
               className="contact-form"
-              method="POST"
-              action="https://formsubmit.co/ahmedimunshi@gmail.com"
             >
               <div className="form-group">
                 <label htmlFor="name">Name</label>
@@ -184,8 +192,21 @@ const Contact: React.FC = () => {
                 type="submit" 
                 className="btn btn-primary"
                 disabled={isSubmitting}
+                onClick={(e) => {
+                  console.log('Button clicked');
+                  console.log('isSubmitting:', isSubmitting);
+                }}
+                style={{
+                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                  opacity: isSubmitting ? 0.7 : 1,
+                  transition: 'opacity 0.3s'
+                }}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? (
+                  <span>Sending... <i className="fas fa-spinner fa-spin"></i></span>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
           </div>
