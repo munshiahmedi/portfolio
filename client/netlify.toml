@@ -1,4 +1,33 @@
 [build]
   base = "."
   publish = "dist"
-  command = "npm ci --include=dev && npm run build"
+  command = "npm ci --omit=dev && npm run build"
+
+[build.environment]
+  NODE_VERSION = "20.11.0"
+
+[context.production]
+  command = "npm ci --omit=dev && npm run build"
+
+[context.deploy-preview]
+  command = "npm ci --omit=dev && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci --omit=dev && npm run build"
+
+# Optimize caching
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "same-origin"
+    Cache-Control = "public, max-age=31536000, must-revalidate"
+    Vary = "Accept-Encoding"
+
+# Redirects for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
