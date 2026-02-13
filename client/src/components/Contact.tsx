@@ -24,12 +24,18 @@ const Contact: React.FC = () => {
       setIsSubmitting(true);
       setSubmitStatus(null);
 
-      // Create form data object
+      // Format the message to include all fields clearly
+      const formattedMessage = `
+        Name: ${formData.name.trim()}
+        Email: ${formData.email.trim()}
+        Message: ${formData.message.trim()}
+      `;
+
       const formDataObj = new FormData();
       formDataObj.append('name', formData.name.trim());
       formDataObj.append('email', formData.email.trim());
-      formDataObj.append('message', formData.message.trim());
-      formDataObj.append('_subject', 'New Contact Form Submission');
+      formDataObj.append('message', formattedMessage);
+      formDataObj.append('_subject', `New Contact from ${formData.name.trim()}`);
       formDataObj.append('_template', 'table');
       formDataObj.append('_captcha', 'false');
       formDataObj.append('_next', `${window.location.origin}/thank-you`);
