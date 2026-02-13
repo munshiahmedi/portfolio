@@ -64,7 +64,7 @@ const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
             </div>
             <div className="hero__photo">
               <img 
-                src="/Ahmedii.webp" 
+                src="Ahmedii.webp" 
                 alt="Profile" 
                 className="hero__profile-img" 
                 style={{ 
