@@ -9,42 +9,7 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="projects-grid">
-          {/* Project 1 */}
-          <div className="project-showcase">
-            <div className="project-proof">
-              <img 
-                src="portfolio.webp" 
-                alt="Portfolio Website"
-                className="project-image"
-              />
-            </div>
-            <h3 className="project-title">Personal Portfolio Website</h3>
-            <p className="project-description">
-              A responsive portfolio website built with React and TypeScript to showcase my work and skills.
-            </p>
-            <p className="coming-soon">Live demo coming soon</p>
-            <div className="project-actions">
-              <a 
-                href="https://github.com/munshiahmedi/portfolio" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                <i className="fab fa-github"></i> View Code
-              </a>
-            </div>
-            <div className="project-tech-stack">
-              <h4>Tech Stack</h4>
-              <div className="tech-tags">
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>CSS3</span>
-                <span>Vite</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Project 2 */}
+          {/* Project 1 - Hotel Booking System */}
           <div className="project-showcase">
             <div className="project-proof">
               <img 
@@ -80,7 +45,7 @@ const Projects: React.FC = () => {
             </div>
           </div>
 
-          {/* Project 3 - React Native Social App */}
+          {/* Project 2 - React Native Social App */}
           <div className="project-showcase">
             <div className="project-proof" style={{
               backgroundColor: '#0f172a',

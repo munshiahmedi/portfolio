@@ -29,10 +29,10 @@ const About: React.FC = () => {
               <h3 className="about-card-title">About Me</h3>
               <div className="about-card-content">
                 <p className="about-description">
-                  I'm a Frontend Developer with hands-on experience building web and mobile applications using React and React Native. I'm currently working as a Frontend Developer Intern, with 5+ months of real-world experience focused on clean UI, authentication flows, and API integration.
+                  I'm a Frontend Developer with over 5 months of real-world experience, currently working as a Frontend Developer Intern.
                 </p>
                 <p className="about-description">
-                  Alongside my internship, I built a full-stack Hotel Booking System and designed my own developer portfolio to showcase my projects and skills. I enjoy building responsive interfaces, writing maintainable code, and continuously improving my skills through practical development.
+                  Alongside my internship, I've built a full-stack Hotel Booking System and designed my own developer portfolio to showcase my work. I enjoy creating responsive interfaces, writing maintainable code, and continuously improving through hands-on development.
                 </p>
               </div>
             </div>

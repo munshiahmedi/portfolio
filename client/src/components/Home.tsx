@@ -7,7 +7,7 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentLine, setCurrentLine] = useState(0);
-  const lines = ['Junior Full Stack Developer'];
+  const lines = ['Frontend Developer'];
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -44,7 +44,7 @@ const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
                 <div className="title-line"><span className="typing-text">{displayText}</span><span className="cursor">|</span></div>
               </h2>
               <p className="hero__description">
-                I build scalable and user-focused web applications using modern frontend and backend technologies.
+                I'm a frontend developer focused on building clean UI and smooth user experiences.
               </p>
               <div className="hero__actions">
                 <button 
