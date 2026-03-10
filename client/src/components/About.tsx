@@ -32,7 +32,7 @@ const About: React.FC = () => {
                   I'm a Frontend Developer with over 5 months of real-world experience, currently working as a Frontend Developer Intern.
                 </p>
                 <p className="about-description">
-                  Alongside my internship, I've built a full-stack Hotel Booking System and designed my own developer portfolio to showcase my work. I enjoy creating responsive interfaces, writing maintainable code, and continuously improving through hands-on development.
+                  Alongside my internship, I've built a full-stack Hotel Booking System, created a Smart Book website using React.js, Node.js, Express.js and MySQL, and designed my own developer portfolio to showcase my work. I enjoy creating responsive interfaces, writing maintainable code, and continuously improving through hands-on development.
                 </p>
               </div>
             </div>
