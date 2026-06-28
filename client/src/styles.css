@@ -1102,7 +1102,288 @@ section + section {
   line-height: 1.6;
 }
 
-.skills-container {
+.learning-section {
+  padding: 5rem 1rem;
+  background: var(--bg-main);
+}
+
+.learning-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.learning-content {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.learning-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  text-align: center;
+  max-width: 740px;
+  width: min(100%, 740px);
+  margin: 0 auto;
+}
+
+.learning-description {
+  color: var(--text-body);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.learning-highlights {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+.learning-highlights li {
+  position: relative;
+  color: var(--text-body);
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.learning-highlights li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  color: var(--accent-main);
+}
+
+.learning-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+}
+
+.learning-card {
+  background: var(--bg-section);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.learning-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.learning-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent-main);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  width: fit-content;
+}
+
+.learning-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.learning-card-text {
+  color: var(--text-body);
+  line-height: 1.75;
+}
+
+.learning-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.learning-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .learning-content {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .learning-section {
+    padding: 4rem 0.75rem;
+  }
+
+  .learning-card {
+    padding: 1.25rem;
+  }
+}
+
+  /* GitHub Activity Section */
+  .github-section {
+    padding: 4rem 1rem;
+    background: var(--bg-main);
+  }
+
+  .github-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .github-top {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .github-profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .github-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-hover);
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .github-meta strong {
+    display: block;
+    color: var(--text-heading);
+  }
+
+  .github-link {
+    color: var(--accent-main);
+    font-size: 0.9rem;
+  }
+
+  .github-contrib img {
+    max-width: 380px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .github-contrib-placeholder {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 380px;
+  }
+
+  .github-repos h3 {
+    margin: 0 0 0.75rem 0;
+    color: var(--text-heading);
+  }
+
+  .repo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .repo-card {
+    background: var(--bg-section);
+    border: 1px solid var(--border-default);
+    padding: 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .repo-name {
+    color: var(--text-heading);
+  }
+
+  .repo-stars {
+    color: var(--accent-main);
+    font-weight: 700;
+  }
+
+  .repo-desc {
+    color: var(--text-body);
+    font-size: 0.95rem;
+    flex-grow: 1;
+  }
+
+  .repo-meta {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 960px) {
+    .repo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .github-top {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .repo-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -1445,11 +1726,15 @@ a:focus-visible {
 
 .about-grid-new {
   display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 3rem;
-  align-items: flex-start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.about-grid-2x2 {
+  justify-items: stretch;
 }
 
 .about-photo-container {
@@ -1547,6 +1832,22 @@ a:focus-visible {
   margin-bottom: 1rem;
 }
 
+/* Make Education card taller for better visual balance */
+.about-card-education,
+.about-card-main {
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .about-card-education,
+  .about-card-main {
+    min-height: auto;
+  }
+}
+
 .info-item:last-child {
   margin-bottom: 0;
 }
@@ -1598,7 +1899,7 @@ a:focus-visible {
 /* Responsive Design for New Layout */
 @media (max-width: 1024px) {
   .about-grid-new {
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 900px;
   }
   
@@ -2971,8 +3272,8 @@ a:focus-visible {
 
 .about-grid-new {
   display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
@@ -3107,7 +3408,7 @@ a:focus-visible {
 /* Responsive Design for New Layout */
 @media (max-width: 1024px) {
   .about-grid-new {
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 900px;
   }
   

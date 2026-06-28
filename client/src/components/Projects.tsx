@@ -9,43 +9,7 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="projects-grid">
-          {/* Project 1 - Hotel Booking System */}
-          <div className="project-showcase">
-            <div className="project-proof">
-              <img 
-                src="hotel-booking.webp" 
-                alt="Hotel Booking System"
-                className="project-image"
-              />
-            </div>
-            <h3 className="project-title">Hotel Booking System</h3>
-            <p className="project-description">
-              A complete hotel booking platform with user authentication, booking management, and admin dashboard.
-            </p>
-            <p className="coming-soon">Live demo coming soon</p>
-            <div className="project-actions">
-              <a 
-                href="https://github.com/munshiahmedi/hotel-booking" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                <i className="fab fa-github"></i> View Code
-              </a>
-            </div>
-            <div className="project-tech-stack">
-              <h4>Tech Stack</h4>
-              <div className="tech-tags">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>MySQL</span>
-                <span>TypeScript</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Project 2 - React Native Social App */}
+          {/* Project 1 - Smart Book App */}
           <div className="project-showcase">
             <div className="project-proof" style={{
               backgroundColor: '#0f172a',
@@ -58,26 +22,103 @@ const Projects: React.FC = () => {
               border: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
               <img 
-                src="react-native-thumbnail.webp" 
-                alt="Social Media App Mockup"
+                src="smart-book-app.webp" 
+                alt="Smart Book App"
                 style={{
                   width: '100%',
                   height: '100%',
-                  objectFit: 'cover',
-                  objectPosition: 'top center'
+                  objectFit: 'cover'
                 }}
                 loading="eager"
               />
             </div>
-            <h3 className="project-title">React Native App</h3>
+            <h3 className="project-title">Smart Book App</h3>
             <p className="project-description">
-              A modern social media platform with real-time updates, and interactive features built with React Native.
+              A full-stack application for managing and organizing books efficiently. Users can add, update, delete, and search books through a responsive interface.
             </p>
             <div className="project-tech-stack">
               <h4>Tech Stack</h4>
               <div className="tech-tags">
-                <span>React Native with Expo</span>
-                <span>React Navigation</span>
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 2 - Task & Habit Tracker */}
+          <div className="project-showcase">
+            <div className="project-proof" style={{
+              backgroundColor: '#0f172a',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '200px',
+              overflow: 'hidden',
+              borderRadius: '8px',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
+            }}>
+              <img 
+                src="task-habit-tracker.webp" 
+                alt="Task & Habit Tracker"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
+                loading="eager"
+              />
+            </div>
+            <h3 className="project-title">Task & Habit Tracker</h3>
+            <p className="project-description">
+              A productivity application that helps users manage daily tasks and build habits consistently with full CRUD functionality and responsive design.
+            </p>
+            <div className="project-tech-stack">
+              <h4>Tech Stack</h4>
+              <div className="tech-tags">
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 3 - LLM Observability App */}
+          <div className="project-showcase">
+            <div className="project-proof" style={{
+              backgroundColor: '#0f172a',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '200px',
+              overflow: 'hidden',
+              borderRadius: '8px',
+              border: '1px solid rgba(255, 255, 255, 0.1)'
+            }}>
+              <img 
+                src="llm-observability.webp" 
+                alt="LLM Observability App"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
+                loading="eager"
+              />
+            </div>
+            <h3 className="project-title">LLM Observability App</h3>
+            <p className="project-description">
+              An AI-powered observability platform for monitoring LLM interactions and performance. Tracks prompts, responses, latency, token usage, and errors with a comprehensive dashboard. 🚧 Under Development
+            </p>
+            <div className="project-tech-stack">
+              <h4>Tech Stack</h4>
+              <div className="tech-tags">
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>MySQL</span>
               </div>
             </div>
           </div>

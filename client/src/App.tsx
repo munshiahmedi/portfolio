@@ -4,16 +4,20 @@ import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Learning from './components/Learning';
+import GitHubActivity from './components/GitHubActivity';
 import Contact from './components/Contact';
 import './styles.css';
 
 const App: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<'home' | 'about' | 'skills' | 'projects' | 'contact'>('home');
+  type Section = 'home' | 'about' | 'skills' | 'projects' | 'learning' | 'contact' | 'resume';
+  const [activeSection, setActiveSection] = useState<Section>('home');
+  const handleSetActiveSection = (section: Section) => setActiveSection(section);
 
   // Handle scroll to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const sections = ['home', 'about', 'skills', 'projects', 'learning', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -34,28 +38,17 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const renderSection = () => {
-    switch (activeSection) {
-      case 'home':
-        return <Home setActiveSection={setActiveSection} />;
-      case 'about':
-        return <About />;
-      case 'skills':
-        return <Skills />;
-      case 'projects':
-        return <Projects />;
-      case 'contact':
-        return <Contact />;
-      default:
-        return <Home setActiveSection={setActiveSection} />;
-    }
-  };
-
   return (
     <div>
-      <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Navbar activeSection={activeSection} setActiveSection={handleSetActiveSection} />
       <main>
-        {renderSection()}
+        <Home setActiveSection={handleSetActiveSection} />
+        <About />
+        <Skills />
+        <Projects />
+        <Learning />
+        <GitHubActivity />
+        <Contact />
       </main>
     </div>
   );

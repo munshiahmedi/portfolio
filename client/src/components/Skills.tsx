@@ -1,14 +1,11 @@
 import React from 'react';
 import { 
   FaReact, FaNodeJs, FaDatabase, FaTools, 
-  FaHtml5, FaCss3Alt, FaJs, FaGithub 
+  FaHtml5, FaCss3Alt, FaJs, FaGithub, FaBrain
 } from 'react-icons/fa';
 import { 
-  SiTypescript, SiNextdotjs, SiExpress, 
-  SiMysql, SiPostman, SiFigma
+  SiExpress, SiMysql, SiPostman
 } from 'react-icons/si';
-import { VscVm, VscLayout } from 'react-icons/vsc';
-import { FiLayers, FiSmartphone } from 'react-icons/fi';
 
 const Skills: React.FC = () => {
 
@@ -28,30 +25,11 @@ const Skills: React.FC = () => {
       ],
     },
     {
-      title: 'UI/UX Design',
-      icon: <VscLayout className="category-icon" />,
-      skills: [
-        { name: 'Figma', level: 85 },
-        { name: 'Wireframes', level: 80 },
-        { name: 'Prototype', level: 75 },
-        { name: 'Responsive Design', level: 85 },
-      ],
-    },
-    {
       title: 'Backend',
       icon: <FaNodeJs className="category-icon" />,
       skills: [
         { name: 'Node.js', level: 85 },
         { name: 'Express.js', level: 80 },
-        { name: 'REST APIs', level: 85 },
-      ],
-    },
-    {
-      title: 'Tools',
-      icon: <FaTools className="category-icon" />,
-      skills: [
-        { name: 'Git & GitHub', level: 80 },
-        { name: 'Postman', level: 85 },
       ],
     },
     {
@@ -59,6 +37,25 @@ const Skills: React.FC = () => {
       icon: <FaDatabase className="category-icon" />,
       skills: [
         { name: 'MySQL', level: 75 },
+      ],
+    },
+    {
+      title: 'Tools',
+      icon: <FaTools className="category-icon" />,
+      skills: [
+        { name: 'Git', level: 85 },
+        { name: 'GitHub', level: 85 },
+        { name: 'Postman', level: 85 },
+      ],
+    },
+    {
+      title: 'Currently Learning',
+      icon: <FaBrain className="category-icon" />,
+      skills: [
+        { name: 'Python', level: 70 },
+        { name: 'AI Engineering', level: 65 },
+        { name: 'Agentic AI', level: 60 },
+        { name: 'n8n', level: 60 },
       ],
     },
   ];

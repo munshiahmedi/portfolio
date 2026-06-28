@@ -9,88 +9,66 @@ const About: React.FC = () => {
           <h2>About Me</h2>
         </div>
 
-        {/* About Content Grid */}
-        <div className="about-grid-new">
-          {/* Left Column - Photo */}
-          <div className="about-photo-container">
-            <div className="hero__photo">
-              <img 
-                src="Ahmedii.webp" 
-                alt="Profile" 
-                className="hero__profile-img"
-              />
+        {/* About Content Grid - simplified: 2x2 cards */}
+        <div className="about-grid-new about-grid-2x2">
+          <div className="about-card about-card-main">
+            <h3 className="about-card-title">About Me</h3>
+            <div className="about-card-content">
+              <p className="about-description">
+                I'm a Full Stack Developer passionate about building modern web applications using React, Node.js, Express, and MySQL. Currently, I'm exploring AI Engineering and Agentic AI through hands-on projects and continuous learning.
+              </p>
             </div>
           </div>
 
-          {/* Right Column - Content Sections */}
-          <div className="about-sections">
-            {/* About Me Section */}
-            <div className="about-card">
-              <h3 className="about-card-title">About Me</h3>
-              <div className="about-card-content">
-                <p className="about-description">
-                  I'm a Frontend Developer with over 5 months of real-world experience, currently working as a Frontend Developer Intern.
-                </p>
-                <p className="about-description">
-                  Alongside my internship, I've built a full-stack Hotel Booking System, created a Smart Book website using React.js, Node.js, Express.js and MySQL, and designed my own developer portfolio to showcase my work. I enjoy creating responsive interfaces, writing maintainable code, and continuously improving through hands-on development.
-                </p>
-              </div>
-            </div>
-
-            {/* Education Section */}
-            <div className="about-card">
-              <h3 className="about-card-title">Education</h3>
-              <div className="about-card-content">
-                <div className="info-item">
-                  <div className="info-icon">🎓</div>
-                  <div className="info-details">
-                    <h4>B.Tech – Electronics</h4>
-                    <p className="info-subtitle">Jawaharlal Nehru Technological University, Anantapur</p>
-                  </div>
+          <div className="about-card about-card-education">
+            <h3 className="about-card-title">Education</h3>
+            <div className="about-card-content">
+              <div className="info-item">
+                <div className="info-icon">🎓</div>
+                <div className="info-details">
+                  <h4>B.Tech – Electronics</h4>
+                  <p className="info-subtitle">Jawaharlal Nehru Technological University, Anantapur</p>
                 </div>
               </div>
-            </div>
-
-            {/* Experience Section */}
-            <div className="about-card">
-              <h3 className="about-card-title">Experience</h3>
-              <div className="about-card-content">
-                <div className="info-item">
-                  <div className="info-icon">💼</div>
-                  <div className="info-details">
-                    <h4>Frontend Developer Intern</h4>
-                    <p className="info-subtitle">Mantravat Infotech · 5+ months (Currently working)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Location Section */}
-            <div className="about-card">
-              <h3 className="about-card-title">Location</h3>
-              <div className="about-card-content">
-                <div className="info-item">
-                  <div className="info-icon">📍</div>
-                  <div className="info-details">
-                    <h4>Adoni, Andhra Pradesh</h4>
-                    <p className="info-subtitle">India</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Download CV Button */}
-            <div className="cv-download-section">
-              <a
-                href="https://drive.google.com/uc?export=download&id=1x7Iah6_m2vrdRbvEHfwlpJd6PsjoaCq2"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cv-download-btn"
-              >
-                Download CV
-              </a>
             </div>
           </div>
+
+          <div className="about-card">
+            <h3 className="about-card-title">Experience</h3>
+            <div className="about-card-content">
+              <div className="info-item">
+                <div className="info-icon">💼</div>
+                <div className="info-details">
+                  <h4>Frontend Developer Intern</h4>
+                  <p className="info-subtitle">Mantravat Infotech · 5+ months (Currently working)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="about-card">
+            <h3 className="about-card-title">Location</h3>
+            <div className="about-card-content">
+              <div className="info-item">
+                <div className="info-icon">📍</div>
+                <div className="info-details">
+                  <h4>Adoni, Andhra Pradesh</h4>
+                  <p className="info-subtitle">India</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="cv-download-section" style={{textAlign: 'center', marginTop: '1.5rem'}}>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1x7Iah6_m2vrdRbvEHfwlpJd6PsjoaCq2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cv-download-btn"
+          >
+            Download CV
+          </a>
         </div>
       </div>
     </section>

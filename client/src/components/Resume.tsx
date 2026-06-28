@@ -9,7 +9,7 @@ const Resume: React.FC = () => {
           <div className="accent-line"></div>
           <h2>Resume & Experience Snapshot</h2>
           <p className="section-subtitle">
-            Frontend Developer with hands-on React & React Native experience, focused on real-world product development.
+            Frontend Developer with hands React, focused on real-world product development.
           </p>
         </div>
 
@@ -32,14 +32,14 @@ const Resume: React.FC = () => {
 
             <div className="resume-actions">
               <a
-                href="/resume.pdf"
-                download="Ahmedi_Resume.pdf"
+                href="/Ahmedi_Frontend_Developer_Resume.pdf"
+                download="Ahmedi_Frontend Developer"
                 className="btn-primary"
               >
                 Download Resume (PDF)
               </a>
               <a
-                href="/resume.pdf"
+                href="/Ahmedi_Frontend_Developer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
