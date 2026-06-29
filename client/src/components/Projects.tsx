@@ -11,77 +11,18 @@ const Projects: React.FC = () => {
         <div className="projects-grid">
           {/* Project 1 - Smart Book App */}
           <div className="project-showcase">
-            <div className="project-proof" style={{
-              backgroundColor: '#0f172a',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              height: '300px',
-              overflow: 'hidden',
-              borderRadius: '8px',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
-            }}>
-              <img 
-                src="smartbookapp.png" 
-                alt="Smart Book App"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover'
-                }}
-                loading="eager"
-              />
-            </div>
-            <h3 className="project-title">Smart Book App</h3>
-            <p className="project-description">
-              A full-stack application for managing and organizing books efficiently. Users can add, update, delete, and search books through a responsive interface.
-            </p>
-            <div className="project-tech-stack">
-              <h4>Tech Stack</h4>
-              <div className="tech-tags">
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>MySQL</span>
-              </div>
+            <div className="project-description-block">
+                <h4 className="project-subtitle">Smart Book App</h4>
+                <p className="project-description">A full-stack web application that enables users to manage book records with CRUD operations and search functionality through a responsive interface.</p>
+                <p className="project-description"><strong>Tech Stack:</strong> React.js • Node.js • Express.js • MySQL</p>
             </div>
           </div>
-
-          {/* Project 2 - Task & Habit Tracker */}
+          {/* Project 2 - LLM Observability Dashboard */}
           <div className="project-showcase">
-            <div className="project-proof" style={{
-              backgroundColor: '#0f172a',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              height: '300px',
-              overflow: 'hidden',
-              borderRadius: '8px',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
-            }}>
-              <img 
-                src="TaskHabit.png" 
-                alt="Task & Habit Tracker"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover'
-                }}
-                loading="eager"
-              />
-            </div>
-            <h3 className="project-title">Task & Habit Tracker</h3>
-            <p className="project-description">
-              A productivity application that helps users manage daily tasks and build habits consistently with full CRUD functionality and responsive design.
-            </p>
-            <div className="project-tech-stack">
-              <h4>Tech Stack</h4>
-              <div className="tech-tags">
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>MySQL</span>
-              </div>
+            <div className="project-description-block">
+              <h4 className="project-subtitle">LLM Observability Dashboard <span style={{fontStyle: 'italic', fontWeight: 400}}>(In Progress)</span></h4>
+              <p className="project-description">Building a full-stack web application for monitoring and analyzing Large Language Model (LLM) interactions. The dashboard is designed to track prompts, responses, latency, token usage, and performance metrics through interactive visualizations.</p>
+              <p className="project-description"><strong>Tech Stack:</strong> React.js • Node.js • Express.js • MySQL</p>
             </div>
           </div>
         </div>

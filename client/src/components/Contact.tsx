@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
                     rel="noopener noreferrer"
                     className="contact-link"
                   >
-                    linkedin.com/in/m-ahmedi-80baab26
+                    linkedin.com/in/m-ahmedi-80baab269
                   </a>
                 </div>
               </div>

@@ -40,7 +40,7 @@ const About: React.FC = () => {
                 <div className="info-icon">💼</div>
                 <div className="info-details">
                   <h4>Frontend Developer Intern</h4>
-                  <p className="info-subtitle">Mantravat Infotech · 5+ months (Currently working)</p>
+                  <p className="info-subtitle">Mantravat Infotech · 6 months</p>
                 </div>
               </div>
             </div>

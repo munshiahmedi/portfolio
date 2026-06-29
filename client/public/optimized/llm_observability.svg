@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#0ea5a4"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g2)" rx="24"/>
+  <g fill="#fff" font-family="Inter, Arial, sans-serif" font-weight="700">
+    <text x="60" y="120" font-size="48">LLM Observability</text>
+    <text x="60" y="180" font-size="20" font-weight="500">Dashboard (In Progress)</text>
+  </g>
+  <g transform="translate(60,260)" fill="#fff">
+    <circle cx="120" cy="140" r="80" fill-opacity="0.12"/>
+    <rect x="240" y="60" width="640" height="200" rx="8" fill-opacity="0.08"/>
+    <text x="260" y="120" font-size="18">Prompts • Responses • Latency</text>
+  </g>
+</svg>
