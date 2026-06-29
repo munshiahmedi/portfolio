@@ -7,7 +7,7 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentLine, setCurrentLine] = useState(0);
-  const lines = ['Full Stack Developer', 'AI Engineer'];
+  const lines = ['Full Stack Developer'];
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -44,7 +44,7 @@ const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
                 <div className="title-line"><span className="typing-text">{displayText}</span><span className="cursor">|</span></div>
               </h2>
               <p className="hero__description">
-                Full Stack Developer specializing in React, Node.js, Express, and MySQL. Currently exploring AI Engineering, Agentic AI, and intelligent applications. I enjoy building scalable web applications and learning cutting-edge AI technologies.
+                Full Stack Developer specializing in React, Node.js, Express, and MySQL. I enjoy building scalable web applications and continuous learning.
               </p>
               <div className="hero__actions">
                 <button 
@@ -54,7 +54,7 @@ const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
                   Hire Me
                 </button>
                 <a 
-                  href="/resume.pdf" 
+                  href="/Ahmedi_FullStack_Developer.pdf" 
                   className="btn btn-secondary"
                   download="Ahmedi_Resume.pdf"
                 >

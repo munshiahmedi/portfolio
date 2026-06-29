@@ -15,7 +15,7 @@ const About: React.FC = () => {
             <h3 className="about-card-title">About Me</h3>
             <div className="about-card-content">
               <p className="about-description">
-                I'm a Full Stack Developer passionate about building modern web applications using React, Node.js, Express, and MySQL. Currently, I'm exploring AI Engineering and Agentic AI through hands-on projects and continuous learning.
+                I'm a Full Stack Developer passionate about building modern web applications using React, Node.js, Express, and MySQL. I'm committed to continuous learning and building practical solutions.
               </p>
             </div>
           </div>

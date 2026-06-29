@@ -32,14 +32,14 @@ const Resume: React.FC = () => {
 
             <div className="resume-actions">
               <a
-                href="/Ahmedi_Frontend_Developer_Resume.pdf"
-                download="Ahmedi_Frontend Developer"
+                href="/Ahmedi_FullStack_Developer.pdf"
+                download="Ahmedi_Resume.pdf"
                 className="btn-primary"
               >
                 Download Resume (PDF)
               </a>
               <a
-                href="/Ahmedi_Frontend_Developer.pdf"
+                href="/Ahmedi_FullStack_Developer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"

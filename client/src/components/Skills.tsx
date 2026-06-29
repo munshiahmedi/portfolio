@@ -52,9 +52,6 @@ const Skills: React.FC = () => {
       title: 'Currently Learning',
       icon: <FaBrain className="category-icon" />,
       skills: [
-        { name: 'Python', level: 70 },
-        { name: 'AI Engineering', level: 65 },
-        { name: 'Agentic AI', level: 60 },
         { name: 'n8n', level: 60 },
       ],
     },
