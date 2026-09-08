@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   FaReact, FaNodeJs, FaDatabase, FaTools, 
-  FaHtml5, FaCss3Alt, FaJs, FaGithub, FaBrain
+  FaHtml5, FaCss3Alt, FaJs, FaGithub
 } from 'react-icons/fa';
 import { 
   SiExpress, SiMysql, SiPostman
@@ -46,13 +46,6 @@ const Skills: React.FC = () => {
         { name: 'Git', level: 85 },
         { name: 'GitHub', level: 85 },
         { name: 'Postman', level: 85 },
-      ],
-    },
-    {
-      title: 'Currently Learning',
-      icon: <FaBrain className="category-icon" />,
-      skills: [
-        { name: 'n8n', level: 60 },
       ],
     },
   ];

@@ -54,7 +54,7 @@ const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
                   Hire Me
                 </button>
                 <a 
-                  href="/Ahmedi_FullStack_Developer.pdf" 
+                  href="/Ahmedi_Resume.pdf" 
                   className="btn btn-secondary"
                   download="Ahmedi_Resume.pdf"
                 >

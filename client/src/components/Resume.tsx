@@ -9,7 +9,7 @@ const Resume: React.FC = () => {
           <div className="accent-line"></div>
           <h2>Resume & Experience Snapshot</h2>
           <p className="section-subtitle">
-            Frontend Developer with hands React, focused on real-world product development.
+            Full Stack Developer with 6 months of internship experience in React.js, Node.js, Express.js, and MySQL.
           </p>
         </div>
 
@@ -18,28 +18,28 @@ const Resume: React.FC = () => {
           <div className="resume-content">
             <div className="resume-description">
               <p>
-                View my resume highlighting hands-on frontend experience and production-ready projects.
+                Skilled in building REST APIs, responsive web applications, and database integrations.
               </p>
               <ul className="resume-highlights-list">
-                <li>5+ months hands-on experience as a React Native Intern</li>
-                <li>Built real-world frontend & full-stack applications</li>
-                <li>Strong focus on clean UI, reusable components & API integration</li>
+                <li>Built two full-stack projects with React.js, Node.js, Express.js, and MySQL</li>
+                <li>Built responsive UI components and integrated REST APIs</li>
+                <li>Handled form validation, API error handling, and database integration</li>
               </ul>
               <p className="confidence-line">
-                Currently contributing to real product features and improving code quality during my internship.
+                Seeking roles as a Full Stack Developer, React Developer, or Junior Software Engineer.
               </p>
             </div>
 
             <div className="resume-actions">
               <a
-                href="/Ahmedi_FullStack_Developer.pdf"
+                href="/Ahmedi_Resume.pdf"
                 download="Ahmedi_Resume.pdf"
                 className="btn-primary"
               >
                 Download Resume (PDF)
               </a>
               <a
-                href="/Ahmedi_FullStack_Developer.pdf"
+                href="/Ahmedi_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
@@ -60,34 +60,45 @@ const Resume: React.FC = () => {
               <div className="resume-highlights">
                 <div className="highlight-item">
                   <div className="highlight-category">💼 Role</div>
-                  <div className="highlight-role">React Native Intern</div>
-                  <div className="highlight-duration">5+ months · Real-world projects</div>
+                  <div className="highlight-role">Frontend Developer Intern</div>
+                  <div className="highlight-duration">Mantravat Infotech · November 2025 - May 2026</div>
                 </div>
                 
                 <div className="highlight-item">
-                  <div className="highlight-category">🚀 Key Project</div>
-                  <div className="highlight-role">Hotel Booking Application</div>
-                  <div className="highlight-duration">Auth · Booking system · Admin dashboard</div>
+                  <div className="highlight-category">🚀 Projects</div>
+                  <div className="highlight-role">Smart Book App</div>
+                  <div className="highlight-duration">CRUD system · REST APIs · MySQL database</div>
+                  <div className="highlight-role">Task Management System</div>
+                  <div className="highlight-duration">Authentication · Status and priority · Search and filtering</div>
+                </div>
+
+                <div className="highlight-item">
+                  <div className="highlight-category">🎓 Education</div>
+                  <div className="highlight-role">B.Tech - Electronics and Communication Engineering</div>
+                  <div className="highlight-duration">JNTU Anantapur · 2024</div>
                 </div>
                 
                 <div className="tech-summary">
                   <div className="highlight-category">🛠 Tech Stack</div>
                   <div className="tech-tags">
-                    <span className="tech-tag">React</span>
-                    <span className="tech-tag">TypeScript</span>
+                    <span className="tech-tag">React.js</span>
+                    <span className="tech-tag">JavaScript</span>
                     <span className="tech-tag">Node.js</span>
+                    <span className="tech-tag">Express.js</span>
                     <span className="tech-tag">MySQL</span>
+                    <span className="tech-tag">Git</span>
+                    <span className="tech-tag">Postman</span>
                   </div>
                 </div>
                 
                 <div className="trust-signal">
                   <div className="highlight-category">🔥 Production Impact</div>
-                  <div className="trust-text">Actively contributing to production-level features during internship</div>
+                  <div className="trust-text">Open to remote and on-site opportunities in India</div>
                 </div>
               </div>
               
               <div className="final-call">
-                Open to frontend and React Native opportunities where I can contribute and grow.
+                Open to frontend and React.js opportunities where I can contribute and grow.
               </div>
             </div>
           </div>

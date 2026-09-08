@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 
-type Section = 'home' | 'about' | 'projects' | 'learning' | 'contact' | 'skills' | 'resume';
+type Section = 'home' | 'about' | 'projects' | 'contact' | 'skills' | 'resume';
 
 interface NavbarProps {
   activeSection: Section;
@@ -20,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
     setIsMenuOpen(false); // Close menu after clicking a link on mobile
   };
 
-  const handleNavClick = (section: 'home' | 'about' | 'projects' | 'learning' | 'contact' | 'skills') => {
+  const handleNavClick = (section: 'home' | 'about' | 'projects' | 'resume' | 'contact' | 'skills') => {
     setActiveSection(section);
     if (section === 'home') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -97,10 +97,10 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
             Projects
           </button>
           <button 
-            onClick={() => handleNavClick('learning')} 
-            className={activeSection === 'learning' ? 'active' : ''}
+            onClick={() => handleNavClick('resume')} 
+            className={activeSection === 'resume' ? 'active' : ''}
           >
-            Learning
+            Resume
           </button>
           <button 
             onClick={() => handleNavClick('contact')} 

@@ -13,15 +13,19 @@ const Projects: React.FC = () => {
           <div className="project-showcase">
             <div className="project-description-block">
                 <h4 className="project-subtitle">Smart Book App</h4>
-                <p className="project-description">A full-stack web application that enables users to manage book records with CRUD operations and search functionality through a responsive interface.</p>
+              <p className="project-description">Built CRUD-based book management system.</p>
+              <p className="project-description">Developed REST APIs using Node.js and Express.js.</p>
+              <p className="project-description">Integrated MySQL database.</p>
                 <p className="project-description"><strong>Tech Stack:</strong> React.js • Node.js • Express.js • MySQL</p>
             </div>
           </div>
-          {/* Project 2 - LLM Observability Dashboard */}
           <div className="project-showcase">
             <div className="project-description-block">
-              <h4 className="project-subtitle">LLM Observability Dashboard <span style={{fontStyle: 'italic', fontWeight: 400}}>(In Progress)</span></h4>
-              <p className="project-description">Building a full-stack web application for monitoring and analyzing Large Language Model (LLM) interactions. The dashboard is designed to track prompts, responses, latency, token usage, and performance metrics through interactive visualizations.</p>
+              <h4 className="project-subtitle">Task Management System</h4>
+              <p className="project-description">Built a full-stack task management system with CRUD operations.</p>
+              <p className="project-description">Implemented user authentication and task management.</p>
+              <p className="project-description">Added task status, priority, search, and filtering.</p>
+              <p className="project-description">Integrated REST APIs with MySQL database.</p>
               <p className="project-description"><strong>Tech Stack:</strong> React.js • Node.js • Express.js • MySQL</p>
             </div>
           </div>
