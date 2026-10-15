@@ -1,78 +1,46 @@
 import React from 'react';
 
-const About: React.FC = () => {
-  return (
-    <section id="about" className="about-section">
-      <div className="about-container">
-        {/* Section Header */}
-        <div className="section-header">
-          <h2>About Me</h2>
-        </div>
+const About: React.FC = () => (
+  <section id="about" className="section about-section" aria-labelledby="about-title">
+    <div className="container">
+      <div className="section-heading">
+        <p className="eyebrow">A little about me</p>
+        <h2 id="about-title">Building practical, thoughtful web experiences.</h2>
+        <p className="section-intro">
+          I’m an early-career developer interested in frontend and full-stack roles. I enjoy
+          turning requirements into clear interfaces and connecting them to reliable APIs.
+        </p>
+      </div>
 
-        {/* About Content Grid - simplified: 2x2 cards */}
-        <div className="about-grid-new about-grid-2x2">
-          <div className="about-card about-card-main">
-            <h3 className="about-card-title">About Me</h3>
-            <div className="about-card-content">
-              <p className="about-description">
-                I'm a Full Stack Developer passionate about building modern web applications using React, Node.js, Express, and MySQL. I'm committed to continuous learning and building practical solutions.
-              </p>
-            </div>
-          </div>
+      <div className="about-grid">
+        <article className="detail-card experience-card">
+          <p className="card-kicker">Experience</p>
+          <h3>Frontend Developer Intern</h3>
+          <p className="detail-meta">Mantravat Infotech <span aria-hidden="true">·</span> November 2025 – May 2026</p>
+          <ul className="detail-list">
+            <li>Developed React UI components.</li>
+            <li>Integrated REST APIs and handled loading states and API errors.</li>
+            <li>Implemented form validation.</li>
+            <li>Used Git and GitHub for version control.</li>
+          </ul>
+        </article>
 
-          <div className="about-card about-card-education">
-            <h3 className="about-card-title">Education</h3>
-            <div className="about-card-content">
-              <div className="info-item">
-                <div className="info-icon">🎓</div>
-                <div className="info-details">
-                  <h4>B.Tech – Electronics</h4>
-                  <p className="info-subtitle">Jawaharlal Nehru Technological University, Anantapur</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="about-side">
+          <article className="detail-card">
+            <p className="card-kicker">Education</p>
+            <h3>B.Tech in Electronics and Communication Engineering</h3>
+            <p className="detail-meta">St Johns College of Engineering and Technology <span aria-hidden="true">·</span> 2024</p>
+          </article>
 
-          <div className="about-card">
-            <h3 className="about-card-title">Experience</h3>
-            <div className="about-card-content">
-              <div className="info-item">
-                <div className="info-icon">💼</div>
-                <div className="info-details">
-                  <h4>Frontend Developer Intern</h4>
-                  <p className="info-subtitle">Mantravat Infotech · 6 months</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="about-card">
-            <h3 className="about-card-title">Location</h3>
-            <div className="about-card-content">
-              <div className="info-item">
-                <div className="info-icon">📍</div>
-                <div className="info-details">
-                  <h4>Adoni, Andhra Pradesh</h4>
-                  <p className="info-subtitle">India</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="cv-download-section" style={{textAlign: 'center', marginTop: '1.5rem'}}>
-          <a
-            href="https://drive.google.com/uc?export=download&id=1x7Iah6_m2vrdRbvEHfwlpJd6PsjoaCq2"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cv-download-btn"
-          >
-            Download CV
-          </a>
+          <article className="detail-card location-card">
+            <p className="card-kicker">Based in</p>
+            <h3>Adoni, Andhra Pradesh, India</h3>
+            <p className="detail-meta">Open to junior developer opportunities.</p>
+          </article>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default About;

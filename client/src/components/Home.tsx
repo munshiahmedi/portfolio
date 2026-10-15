@@ -1,86 +1,53 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { FiArrowDownRight, FiArrowUpRight } from 'react-icons/fi';
+import { resumeUrl } from '../siteLinks';
 
-interface HomeProps {
-  setActiveSection: (section: 'home' | 'about' | 'resume' | 'projects' | 'contact') => void;
-}
-
-const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
-  const [displayText, setDisplayText] = useState('');
-  const [currentLine, setCurrentLine] = useState(0);
-  const lines = ['Full Stack Developer'];
-  const [currentLineIndex, setCurrentLineIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const currentText = lines[currentLineIndex];
-    
-    const handleTyping = () => {
-      if (isDeleting) {
-        setDisplayText(currentText.substring(0, displayText.length - 1));
-      } else {
-        setDisplayText(currentText.substring(0, displayText.length + 1));
-      }
-
-      if (!isDeleting && displayText === currentText) {
-        setTimeout(() => setIsDeleting(true), 1000);
-      } else if (isDeleting && displayText === '') {
-        setIsDeleting(false);
-        setCurrentLineIndex((prevIndex) => (prevIndex + 1) % lines.length);
-      }
-    };
-
-    const timer = setTimeout(handleTyping, isDeleting ? 50 : 100);
-    return () => clearTimeout(timer);
-  }, [displayText, currentLineIndex, isDeleting, lines]);
-  return (
-    <>
-      <section id="home" className="hero">
-        <div className="hero__content">
-          <div className="hero__main">
-            <div className="hero__text">
-              <h1 className="hero__greeting">👋 Hello there!</h1>
-              <h2 className="hero__title">
-                <div className="title-line">I'm <span className="name">Ahmedi</span></div>
-                <div className="title-line"><span className="typing-text">{displayText}</span><span className="cursor">|</span></div>
-              </h2>
-              <p className="hero__description">
-                Full Stack Developer specializing in React, Node.js, Express, and MySQL. I enjoy building scalable web applications and continuous learning.
-              </p>
-              <div className="hero__actions">
-                <button 
-                  className="btn btn-primary" 
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Hire Me
-                </button>
-                <a 
-                  href="/Ahmedi_Resume.pdf" 
-                  className="btn btn-secondary"
-                  download="Ahmedi_Resume.pdf"
-                >
-                  Download Resume
-                </a>
-              </div>
-            </div>
-            <div className="hero__photo">
-              <img 
-                src="Ahmedii.webp" 
-                alt="Profile" 
-                className="hero__profile-img" 
-                style={{ 
-                  width: '100%', 
-                  maxWidth: '350px',
-                  height: 'auto',
-                  borderRadius: '8px',
-                  boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
-                }} 
-              />
-            </div>
-          </div>
+const Home: React.FC = () => (
+  <section id="home" className="hero" aria-labelledby="hero-title">
+    <div className="container hero-layout">
+      <div className="hero-copy">
+        <p className="eyebrow">Junior Full Stack Developer <span aria-hidden="true">·</span> React Developer</p>
+        <h1 id="hero-title">Hi, I’m <span>M. Ahmedi.</span></h1>
+        <p className="hero-summary">
+          I build responsive web interfaces with React and JavaScript, and work across
+          REST APIs and MySQL-backed applications. Based in Adoni, Andhra Pradesh.
+        </p>
+        <div className="hero-actions">
+          <a className="button button-primary" href="#contact">
+            Hire me <FiArrowUpRight aria-hidden="true" />
+          </a>
+          <a className="button button-secondary" href="#projects">
+            View projects <FiArrowDownRight aria-hidden="true" />
+          </a>
+          <a className="text-link" href={resumeUrl} download="Ahmedi_Resume.pdf">
+            Download resume
+          </a>
         </div>
-      </section>
-    </>
-  );
-};
+        <div className="hero-socials" aria-label="Professional profiles">
+          <a href="https://github.com/munshiahmedi" target="_blank" rel="noreferrer">
+            GitHub <FiArrowUpRight aria-hidden="true" />
+          </a>
+          <a href="https://www.linkedin.com/in/m-ahmedi-80baab269/" target="_blank" rel="noreferrer">
+            LinkedIn <FiArrowUpRight aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+
+      <div className="hero-portrait-wrap">
+        <img
+          className="hero-portrait"
+          src={`${import.meta.env.BASE_URL}Ahmedii.webp`}
+          alt="Portrait of M. Ahmedi"
+          width="202"
+          height="343"
+          fetchPriority="high"
+        />
+      </div>
+    </div>
+    <a className="scroll-cue" href="#about" aria-label="Scroll to about me">
+      <span aria-hidden="true">↓</span>
+    </a>
+  </section>
+);
 
 export default Home;

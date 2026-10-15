@@ -1,95 +1,52 @@
 import React from 'react';
-import { 
-  FaReact, FaNodeJs, FaDatabase, FaTools, 
-  FaHtml5, FaCss3Alt, FaJs, FaGithub
-} from 'react-icons/fa';
-import { 
-  SiExpress, SiMysql, SiPostman
-} from 'react-icons/si';
+import { FaCode, FaDatabase, FaGitAlt, FaLayerGroup } from 'react-icons/fa';
 
-const Skills: React.FC = () => {
+const skillCategories = [
+  {
+    title: 'Frontend',
+    icon: <FaCode aria-hidden="true" />,
+    skills: ['JavaScript', 'HTML5', 'CSS3', 'React.js'],
+  },
+  {
+    title: 'Backend',
+    icon: <FaLayerGroup aria-hidden="true" />,
+    skills: ['Node.js', 'Express.js', 'REST APIs'],
+  },
+  {
+    title: 'Database',
+    icon: <FaDatabase aria-hidden="true" />,
+    skills: ['MySQL'],
+  },
+  {
+    title: 'Tools',
+    icon: <FaGitAlt aria-hidden="true" />,
+    skills: ['Git', 'GitHub', 'Postman'],
+  },
+];
 
-  const getSkillIcon = (skillName: string) => {
-    return <div className="skill-icon">•</div>;
-  };
-
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      icon: <FaReact className="category-icon" />,
-      skills: [
-        { name: 'HTML', level: 95 },
-        { name: 'CSS', level: 90 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'React.js', level: 85 },
-      ],
-    },
-    {
-      title: 'Backend',
-      icon: <FaNodeJs className="category-icon" />,
-      skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'Express.js', level: 80 },
-      ],
-    },
-    {
-      title: 'Database',
-      icon: <FaDatabase className="category-icon" />,
-      skills: [
-        { name: 'MySQL', level: 75 },
-      ],
-    },
-    {
-      title: 'Tools',
-      icon: <FaTools className="category-icon" />,
-      skills: [
-        { name: 'Git', level: 85 },
-        { name: 'GitHub', level: 85 },
-        { name: 'Postman', level: 85 },
-      ],
-    },
-  ];
-
-  return (
-    <section id="skills" className="skills-section">
-      <div className="section-header">
-        <h2>Skills & Expertise</h2>
+const Skills: React.FC = () => (
+  <section id="skills" className="section skills-section" aria-labelledby="skills-title">
+    <div className="container">
+      <div className="section-heading section-heading-compact">
+        <p className="eyebrow">Tools I work with</p>
+        <h2 id="skills-title">Skills</h2>
       </div>
-      
-      <div className="skills-container">
-        {skillCategories.map((category, index) => (
-          <div key={category.title} className="skill-category">
-            <div className="category-header">
-              <div className="category-icon-container">
-                {category.icon}
-              </div>
-              <h3>{category.title}</h3>
+
+      <div className="skills-grid">
+        {skillCategories.map(({ title, icon, skills }) => (
+          <article className="skill-category" key={title}>
+            <div className="skill-category-heading">
+              <span className="skill-category-icon">{icon}</span>
+              <h3>{title}</h3>
             </div>
-            <div className="skills-grid">
-              {category.skills.map((skill, skillIndex) => (
-                <div 
-                  key={skill.name} 
-                  className="skill-item"
-                >
-                  <div className="skill-header">
-                    {getSkillIcon(skill.name)}
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-level">{skill.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div 
-                      className="skill-progress" 
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+            <ul className="skill-list">
+              {skills.map((skill) => <li key={skill}>{skill}</li>)}
+            </ul>
+          </article>
         ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Skills;

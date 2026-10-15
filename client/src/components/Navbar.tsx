@@ -1,119 +1,75 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { resumeUrl } from '../siteLinks';
 
-type Section = 'home' | 'about' | 'projects' | 'contact' | 'skills' | 'resume';
+export type SectionId = 'home' | 'about' | 'skills' | 'projects' | 'resume' | 'contact';
 
 interface NavbarProps {
-  activeSection: Section;
-  setActiveSection: (section: Section) => void;
+  activeSection: SectionId;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
+const links: { id: SectionId; label: string }[] = [
+  { id: 'home', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'resume', label: 'Resume' },
+  { id: 'contact', label: 'Contact' },
+];
+
+const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false); // Close menu after clicking a link on mobile
-  };
-
-  const handleNavClick = (section: 'home' | 'about' | 'projects' | 'resume' | 'contact' | 'skills') => {
-    setActiveSection(section);
-    if (section === 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      scrollToSection(section);
-    }
-  };
-
-  // Handle scroll effect for navbar
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+    if (!isMenuOpen) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMenuOpen(false);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Close menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
-      if (isMenuOpen && !target.closest('.navbar__nav-items') && !target.closest('.hamburger')) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', closeOnEscape);
+    return () => document.removeEventListener('keydown', closeOnEscape);
   }, [isMenuOpen]);
 
-  return (
-    <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <nav className="navbar__inner">
-        <div className="navbar__brand" onClick={() => handleNavClick('home')}>
-          Ahmedi_codes.
-        </div>
+  const closeMenu = () => setIsMenuOpen(false);
 
-        <button 
-          className="hamburger" 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
+  return (
+    <header className="site-header">
+      <nav className="nav-container container" aria-label="Main navigation">
+        <a className="brand" href="#home" onClick={closeMenu} aria-label="M. Ahmedi, home">
+          <span className="brand-mark" aria-hidden="true">MA</span>
+          <span>M. Ahmedi</span>
+        </a>
+
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setIsMenuOpen((open) => !open)}
         >
-          {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          {isMenuOpen ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}
         </button>
 
-        <div className={`navbar__nav-items ${isMenuOpen ? 'active' : ''}`}>
-          <button 
-            onClick={() => handleNavClick('home')} 
-            className={activeSection === 'home' ? 'active' : ''}
-          >
-            Home
-          </button>
-          <button 
-            onClick={() => handleNavClick('about')} 
-            className={activeSection === 'about' ? 'active' : ''}
-          >
-            About
-          </button>
-          <button 
-            onClick={() => handleNavClick('skills')} 
-            className={activeSection === 'skills' ? 'active' : ''}
-          >
-            Skills
-          </button>
-          <button 
-            onClick={() => handleNavClick('projects')} 
-            className={activeSection === 'projects' ? 'active' : ''}
-          >
-            Projects
-          </button>
-          <button 
-            onClick={() => handleNavClick('resume')} 
-            className={activeSection === 'resume' ? 'active' : ''}
-          >
-            Resume
-          </button>
-          <button 
-            onClick={() => handleNavClick('contact')} 
-            className={activeSection === 'contact' ? 'active' : ''}
-          >
-            Contact
-          </button>
-          <button 
-            onClick={() => handleNavClick('contact')} 
-            className="navbar__cta mobile-cta"
-          >
-            Let's Talk
-          </button>
+        <div
+          className={`nav-links${isMenuOpen ? ' is-open' : ''}`}
+          id="primary-navigation"
+        >
+          {links.map(({ id, label }) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className={activeSection === id ? 'is-active' : undefined}
+              aria-current={activeSection === id ? 'location' : undefined}
+              onClick={closeMenu}
+            >
+              {label}
+            </a>
+          ))}
+          <a className="nav-resume" href={resumeUrl} download="Ahmedi_Resume.pdf" onClick={closeMenu}>
+            Download CV
+          </a>
         </div>
       </nav>
     </header>
