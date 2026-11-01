@@ -8,7 +8,7 @@ const Projects: React.FC = () => (
         <p className="eyebrow">Selected work</p>
         <h2 id="projects-title">Projects</h2>
         <p className="section-intro">
-          Practical projects that let me work across interfaces, APIs, and data.
+          Completed full-stack applications covering CRUD workflows, REST APIs, authentication, and role-based access.
         </p>
       </div>
 
@@ -19,8 +19,8 @@ const Projects: React.FC = () => (
           tech={['React.js', 'Node.js', 'Express.js', 'MySQL']}
           features={[
             'Create, read, update, and delete book records.',
-            'REST API integration with MySQL data storage.',
-            'Backend validation and organized routes, controllers, and services.',
+            'Built REST API endpoints with Node.js and Express.js.',
+            'Integrated MySQL to store and manage book data.',
           ]}
           github="https://github.com/munshiahmedi/smart-book-app"
           image={{
@@ -31,16 +31,15 @@ const Projects: React.FC = () => (
 
         <ProjectCard
           title="Task & Engagement Management Tool"
-          description="A backend-focused project in development for organizing clients, engagements, tasks, and task history."
-          tech={['Node.js', 'Express.js', 'MySQL', 'Postman']}
-          status="In development"
+          description="A full-stack application for managing clients, engagements, tasks, and user roles."
+          tech={['React.js', 'Node.js', 'Express.js', 'MySQL']}
+          status="Completed"
           features={[
-            'Express.js backend with a MySQL connection and relational data tables.',
-            'Task creation API validation and database relationship checks.',
-            'Postman testing for successful requests and error scenarios.',
+            'Organized REST APIs with routes, controllers, middleware, and service-layer logic.',
+            'Implemented JWT authentication and role-based authorization.',
+            'Supported Admin, Manager, and Team Member roles.',
           ]}
-          inDevelopment="React frontend integration and broader task assignment and review workflows."
-          github="https://github.com/munshiahmedi/task-engagement-tool"
+          github="https://github.com/munshiahmedi/taskflow-ai"
           visual={<div className="project-art" aria-label="Technology overview: Express API, MySQL, and Postman">
             <span>Express API</span>
             <span>MySQL</span>

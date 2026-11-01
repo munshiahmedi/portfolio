@@ -5,10 +5,11 @@ const About: React.FC = () => (
     <div className="container">
       <div className="section-heading">
         <p className="eyebrow">A little about me</p>
-        <h2 id="about-title">Building practical, thoughtful web experiences.</h2>
+        <h2 id="about-title">Full-stack developer with hands-on project experience.</h2>
         <p className="section-intro">
-          I’m an early-career developer interested in frontend and full-stack roles. I enjoy
-          turning requirements into clear interfaces and connecting them to reliable APIs.
+          I have six months of frontend internship experience and have built full-stack
+          applications with React.js, Node.js, Express.js, and MySQL. I’m seeking a junior
+          full-stack developer opportunity.
         </p>
       </div>
 
@@ -18,10 +19,10 @@ const About: React.FC = () => (
           <h3>Frontend Developer Intern</h3>
           <p className="detail-meta">Mantravat Infotech <span aria-hidden="true">·</span> November 2025 – May 2026</p>
           <ul className="detail-list">
-            <li>Developed React UI components.</li>
-            <li>Integrated REST APIs and handled loading states and API errors.</li>
-            <li>Implemented form validation.</li>
-            <li>Used Git and GitHub for version control.</li>
+            <li>Developed reusable React.js components for login, registration, and profile management in the Vanshavali application.</li>
+            <li>Implemented add, edit, update, and delete functionality for application records.</li>
+            <li>Integrated REST APIs and implemented form validation and API error handling.</li>
+            <li>Used Git and GitHub for version control and team collaboration.</li>
           </ul>
         </article>
 
@@ -29,7 +30,7 @@ const About: React.FC = () => (
           <article className="detail-card">
             <p className="card-kicker">Education</p>
             <h3>B.Tech in Electronics and Communication Engineering</h3>
-            <p className="detail-meta">St Johns College of Engineering and Technology <span aria-hidden="true">·</span> 2024</p>
+            <p className="detail-meta">JNTU Anantapur <span aria-hidden="true">·</span> 2024</p>
           </article>
 
           <article className="detail-card location-card">

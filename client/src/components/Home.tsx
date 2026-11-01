@@ -9,8 +9,9 @@ const Home: React.FC = () => (
         <p className="eyebrow">Junior Full Stack Developer <span aria-hidden="true">·</span> React Developer</p>
         <h1 id="hero-title">Hi, I’m <span>M. Ahmedi.</span></h1>
         <p className="hero-summary">
-          I build responsive web interfaces with React and JavaScript, and work across
-          REST APIs and MySQL-backed applications. Based in Adoni, Andhra Pradesh.
+          Full Stack Developer with six months of internship experience building responsive
+          React interfaces and working with REST APIs and MySQL-backed applications. Based in
+          Adoni, Andhra Pradesh.
         </p>
         <div className="hero-actions">
           <a className="button button-primary" href="#contact">
